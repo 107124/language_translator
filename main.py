@@ -19,7 +19,8 @@ url = "https://nlp-translation.p.rapidapi.com/v1/translate"
 def speech(text, language):
     print(text)
     output = gTTS(text=text, lang=language, slow=False)
-
+    # 11) Create a new directory "sounds" and create a file "output.mp3"
+    # This will allow us to save the sound AND play the sound
     output.save("./sounds/output.mp3")
     playsound("./sounds/output.mp3")
 
